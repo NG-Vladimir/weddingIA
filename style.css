@@ -1,0 +1,702 @@
+@import url('https://fonts.googleapis.com/css2?family=Caramel&family=Nunito+Sans:ital,wght@0,200;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Inter:wght@300;400;500&display=swap');
+
+html, body {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #eaeaf2;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.wedding-card {
+  position: relative;
+  max-width: 600px;
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
+  margin: 0;
+}
+.wedding-card__photo {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+.wedding-card__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  text-align: center;
+  padding-top: 36px;
+  pointer-events: none;
+}
+.wedding-card__save {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 24px;
+  letter-spacing: 2px;
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 16px #000;
+}
+.wedding-card__date {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-bottom: 28px;
+  text-shadow: 0 2px 16px #000;
+}
+.wedding-card__names {
+  font-family: 'Caramel', cursive;
+  font-size: 70px;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 16px #000;
+  margin-top: -14px;
+  margin-bottom: 0;
+  background: transparent;
+}
+
+.invitation-content {
+  width: 100%;
+  max-width: 600px;
+  background: #f7f2ee;
+  text-align: center;
+  margin: 0 auto;
+  padding: 48px 24px 32px 24px;
+  box-sizing: border-box;
+  margin: 0;
+}
+.invitation-en-title {
+  font-family: 'Caramel', cursive;
+  font-size: 50px;
+  color: #4e3c2b;
+  margin-bottom: 18px;
+  margin-top: 0;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.invitation-subtitle {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #6c584c;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+.invitation-text {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #6c584c;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+.invitation-divider {
+  width: 60px;
+  height: 2px;
+  background: #ded6c1;
+  margin: 0 auto 24px auto;
+}
+.timer-label {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  color: #a59682;
+  margin-bottom: 10px;
+  margin-top: 15px;
+  letter-spacing: 1px;
+}
+
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  margin-top: 0;
+}
+
+.timer-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  height: 110px;
+  min-width: 110px;
+  min-height: 110px;
+  background: #fff;
+  border-radius: 28px;
+  box-shadow: 0 2px 14px 0 #ded6c155;
+  font-family: 'Inter', Arial, sans-serif;
+  color: #232323;
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0;
+  transition: box-shadow 0.25s, transform 0.22s;
+  will-change: box-shadow, transform;
+}
+.timer-block span {
+  font-size: 46px;
+  font-weight: 600;
+  color: #232323;
+  margin-bottom: 3px;
+  line-height: 1.1;
+  font-family: 'Inter', Arial, sans-serif;
+  letter-spacing: 0;
+}
+.timer-block:active {
+  box-shadow: 0 1px 4px 0 #ded6c188;
+  transform: scale(0.97);
+}
+
+.bottom-photo-block {
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+}
+.bottom-photo-overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.bottom-photo-img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+.bottom-photo-text {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  text-shadow: 0px 2px 16px #000, 0 2px 10px #333;
+  letter-spacing: 1px;
+  pointer-events: none;
+  opacity: 0;
+  filter: blur(14px);
+  transition: opacity 2.2s cubic-bezier(.5,1.7,.4,1), filter 2.2s cubic-bezier(.5,1.7,.4,1);
+}
+.bottom-photo-text span {
+  display: block;
+  font-size: 19px;
+  font-style: italic;
+  margin-top: 8px;
+  font-weight: 400;
+}
+.bottom-photo-text.animated {
+  opacity: 1;
+  filter: blur(0px);
+}
+
+/* Галерея сразу после тайминга, без скруглений и без подписей */
+.photo-gallery {
+  width: 100%;
+  max-width: 700px;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  background: none;
+  padding: 0;
+}
+.photo-item {
+  background: #f7f2ee;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: 0 3px 18px #ded6c122;
+  margin: 0;
+}
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+}
+
+.location-block {
+  width: 100%;
+  max-width: 600px;
+  margin: 0;
+  background: #f7f2ee;
+  text-align: center;
+  padding: 36px 18px 30px 18px;
+  box-sizing: border-box;
+}
+.location-en-title {
+  font-family: 'Caramel', cursive;
+  font-size: 50px;
+  color: #4e3c2b;
+  margin-bottom: 15px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-style: italic;
+  text-align: center;
+}
+.location-address {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 22px;
+  color: #6c584c;
+  margin-bottom: 25px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+.location-map-link {
+  display: inline-block;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: #b8aa9a;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 2px solid #ded6c1;
+  padding-bottom: 2px;
+  transition: color 0.18s, border-color 0.18s;
+  cursor: pointer;
+}
+.location-map-link:hover,
+.location-map-link:active {
+  color: #6c584c;
+  border-color: #b8aa9a;
+}
+
+.registration-block {
+  width: 100%;
+  max-width: 600px;
+  margin: 0;
+  background: #f7f2ee;
+  text-align: center;
+  padding: 42px 18px 36px 18px;
+  box-sizing: border-box;
+  border: none;
+}
+
+.registration-icon {
+  margin-bottom: 14px;
+}
+
+.registration-en-title {
+  font-family: 'Caramel', cursive;
+  font-size: 50px;
+  color: #4e3c2b;
+  margin-bottom: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-style: italic;
+  text-align: center;
+}
+
+.registration-subtitle {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 20px;
+  color: #6c584c;
+  margin-bottom: 18px;
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 0;
+}
+.form-row {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+}
+.registration-form input[type="text"],
+.registration-form input[type="number"] {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 16px;
+  padding: 12px;
+  border: 1px solid #ded6c1;
+  background: #fff;
+  color: #6c584c;
+  border-radius: 8px;
+  outline: none;
+  min-width: 0;
+  width: 200px;
+  box-sizing: border-box;
+  transition: border 0.18s;
+}
+.registration-form input:focus {
+  border-color: #b8aa9a;
+}
+.radio-row {
+  justify-content: center;
+  gap: 24px;
+}
+.radio-label {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 16px;
+  color: #6c584c;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+  background: none;
+}
+.registration-form input[type="radio"] {
+  accent-color: #6c584c;
+  width: 20px;
+  height: 20px;
+  margin-right: 3px;
+}
+.registration-btn {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 18px;
+  background: #6c584c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 36px;
+  cursor: pointer;
+  margin-top: 16px;
+  letter-spacing: 1px;
+  transition: background 0.18s;
+}
+.registration-btn:hover,
+.registration-btn:active {
+  background: #a59682;
+}
+.registration-success {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 17px;
+  color: #4e3c2b;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.timing-block {
+  width: 100%;
+  max-width: 600px;
+  margin: 0;
+  background: #f7f2ee;
+  box-shadow: 0 3px 36px #ded6c118;
+  padding: 56px 20px 32px 20px;
+  text-align: center;
+  position: relative;
+}
+.timing-en-title {
+  font-family: 'Caramel', cursive;
+  font-size: 50px;
+  color: #4e3c2b;
+  margin-bottom: 35px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-style: italic;
+  text-align: center;
+}
+
+.timing-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0;
+}
+.timing-item {
+  display: flex;
+  align-items: flex-start;
+  opacity: 0;
+  transform: translateY(60px) scale(0.96);
+  filter: blur(10px);
+  transition:
+    opacity 1.5s cubic-bezier(.56,.2,.3,1.1),
+    transform 1.7s cubic-bezier(.56,.2,.3,1.1),
+    filter 1.7s cubic-bezier(.56,.2,.3,1.1);
+}
+.timing-animated {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0px);
+}
+.ani-delay-1 { transition-delay: 0.15s; }
+.ani-delay-2 { transition-delay: 0.35s; }
+.ani-delay-3 { transition-delay: 0.55s; }
+.ani-delay-4 { transition-delay: 0.75s; }
+.ani-delay-5 { transition-delay: 0.95s; }
+.ani-delay-6 { transition-delay: 1.15s; }
+.timing-time {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 18px;
+  color: #a59682;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-right: 16px;
+  min-width: 32px;
+  border-left: 3px solid #ded6c1;
+  padding-left: 7px;
+  padding-top: 5px;
+}
+.timing-content {
+  text-align: left;
+  flex: 1;
+  padding-bottom: 2px;
+}
+.timing-main {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 20px;
+  color: #6c584c;
+  font-weight: 700;
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+}
+.timing-desc {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 16px;
+  color: #6c584c;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height: 1.5;
+}
+
+.button, .rsvp-btn, button, .timing-item {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Coordinator block styles */
+.coordinator-block {
+  width: 100%;
+  max-width: 600px;
+  background: #f7f2ee;
+  margin: 0 auto 48px auto;
+  padding: 42px 18px 36px 18px;
+  box-sizing: border-box;
+  text-align: center;
+  border: none;
+}
+.coordinator-en-title {
+  font-family: 'Caramel', cursive;
+  font-size: 50px;
+  color: #4e3c2b;
+  margin-bottom: 18px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-style: italic;
+  text-align: center;
+}
+.coordinator-text {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 16px;
+  color: #6c584c;
+  margin-bottom: 18px;
+  line-height: 1.4;
+  text-align: center;
+}
+.coordinator-btn {
+  display: inline-block;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 16px;
+  background: #6c584c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 36px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: background 0.18s;
+  margin-top: 8px;
+}
+.coordinator-btn:hover,
+.coordinator-btn:active {
+  background: #a59682;
+}
+.see-you-text {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 18px;
+  color: #4e3c2b;
+  margin-top: 32px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.coordinator-photo-placeholder {
+  margin-top: 12px;
+}
+.coordinator-photo {
+  margin-top: 10px;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 2px 16px #ded6c155;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* адаптивность */
+@media (max-width: 700px) {
+  .wedding-card,
+  .invitation-content,
+  .bottom-photo-block,
+  .timing-block,
+  .location-block,
+  .registration-block,
+  .coordinator-block {
+    max-width: 100vw;
+  }
+  .wedding-card__names {
+    font-size: 70px;
+    letter-spacing: 1px;
+    margin-top: -25px;
+  }
+  .wedding-card__save,
+  .wedding-card__date {
+    font-size: 18px;
+  }
+  .invitation-en-title,
+  .location-en-title,
+  .timing-en-title,
+  .registration-en-title,
+  .coordinator-en-title {
+    font-size: 50px;
+  }
+  .invitation-subtitle {
+    font-size: 17px;
+  }
+  .invitation-text {
+    font-size: 16px;
+  }
+  .timer-block {
+    width: 72px;
+    height: 72px;
+    min-width: 72px;
+    min-height: 72px;
+    font-size: 14px;
+    border-radius: 18px;
+  }
+  .timer-block span {
+    font-size: 28px;
+  }
+  .invitation-content {
+    padding: 24px 2vw 24px 2vw;
+  }
+  .bottom-photo-text {
+    font-size: 16px;
+  }
+  .bottom-photo-text span {
+    font-size: 13px;
+  }
+  .timing-block {
+    padding: 36px 2vw 18px 2vw;
+  }
+  .timing-en-title {
+    margin-bottom: 22px;
+  }
+  .location-block {
+    padding: 24px 6px 18px 6px;
+  }
+  .location-en-title {
+    margin-bottom: 12px;
+  }
+  .location-address {
+    font-size: 15px;
+    margin-bottom: 18px;
+  }
+  .location-map-link {
+    font-size: 14px;
+  }
+  .registration-block,
+  .coordinator-block {
+    padding: 22px 6px 20px 6px;
+  }
+  .registration-en-title,
+  .coordinator-en-title {
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+  .registration-subtitle,
+  .coordinator-text {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  .registration-form input[type="text"],
+  .registration-form input[type="number"] {
+    font-size: 13px;
+    padding: 8px;
+    width: 200px;
+  }
+  .registration-btn,
+  .coordinator-btn {
+    font-size: 15px;
+    padding: 9px 18px;
+  }
+  .radio-label {
+    font-size: 13px;
+  }
+  .radio-row {
+    gap: 12px;
+  }
+  .see-you-text {
+    font-size: 18px;
+    margin-top: 63px;
+    margin-bottom: 29px;
+  }
+}
+
+@media (max-width: 480px) {
+  .timer-block {
+    width: 53px;
+    height: 53px;
+    min-width: 53px;
+    min-height: 53px;
+    font-size: 12px;
+    border-radius: 11px;
+  }
+  .timer-block span {
+    font-size: 17px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timing-item,
+  .timing-animated,
+  .bottom-photo-text,
+  .bottom-photo-text.animated {
+    transition: none !important;
+    filter: none !important;
+  }
+}

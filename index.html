@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caramel&family=Nunito+Sans:ital,wght@0,200;1,200&family=Montserrat:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main-wrapper">
+    <!-- Верхний блок -->
+    <div class="wedding-card">
+      <img src="1.png" alt="Ivan & Anna" class="wedding-card__photo">
+      <div class="wedding-card__overlay">
+        <div class="wedding-card__save">SAVE THE DATE</div>
+        <div class="wedding-card__date">18.10.2025</div>
+        <div class="wedding-card__names">Ivan &amp; Anna</div>
+      </div>
+    </div>
+    <!-- Второй блок-приглашение + таймер -->
+    <div class="invitation-content">
+      <div class="invitation-en-title">Invitation</div>
+      <div class="invitation-subtitle">ДОРОГИЕ РОДНЫЕ И БЛИЗКИЕ!</div>
+      <div class="invitation-text">
+        Приглашаем вас разделить радость особенного<br>
+        для нас события<br>
+        и стать частью начала нашей семейной истории!
+      </div>
+      <div class="invitation-divider"></div>
+      <div class="timer-label">Увидимся с вами через:</div>
+      <div id="countdown" class="countdown-timer"></div>
+    </div>
+    <!-- 3-й блок: фото и текст на нем -->
+    <div class="bottom-photo-block">
+      <div class="bottom-photo-overlay">
+        <div class="bottom-photo-text" id="animatedText">
+          ...но любовь из них больше.<br>
+          <span>1 Кор. 13:13</span>
+        </div>
+        <img src="2.png" alt="Bottom block photo" class="bottom-photo-img">
+      </div>
+    </div>
+    <!-- Timing Block -->
+    <div class="timing-block">
+      <div class="timing-en-title">Timing</div>
+      <div class="timing-list">
+        <div class="timing-item ani-delay-1">
+          <div class="timing-time">13:30</div>
+          <div class="timing-content">
+            <div class="timing-main">WELCOME</div>
+            <div class="timing-desc">Сбор гостей</div>
+          </div>
+        </div>
+        <div class="timing-item ani-delay-2">
+          <div class="timing-time">14:00</div>
+          <div class="timing-content">
+            <div class="timing-main">ВЕНЧАНИЕ</div>
+          </div>
+        </div>
+        <div class="timing-item ani-delay-3">
+          <div class="timing-time">15:00</div>
+          <div class="timing-content">
+            <div class="timing-main">ПЕРЕРЫВ</div>
+            <div class="timing-desc">Время для поздравлений и пожеланий</div>
+          </div>
+        </div>
+        <div class="timing-item ani-delay-4">
+          <div class="timing-time">16:00</div>
+          <div class="timing-content">
+            <div class="timing-main">ФУРШЕТ</div>
+            <div class="timing-desc">Время вкусной еды и развлечений</div>
+          </div>
+        </div>
+        <div class="timing-item ani-delay-5">
+          <div class="timing-time">18:30</div>
+          <div class="timing-content">
+            <div class="timing-main">WEDDING CAKE</div>
+            <div class="timing-desc">Сладкое завершение вечера</div>
+          </div>
+        </div>
+        <div class="timing-item ani-delay-6">
+          <div class="timing-time">19:00</div>
+          <div class="timing-content">
+            <div class="timing-main">AFTER PARTY</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Галерея с четырьмя фото: сразу после тайминга -->
+    <div class="photo-gallery">
+      <div class="photo-item">
+        <img src="3.png" alt="">
+      </div>
+      <div class="photo-item">
+        <img src="4.png" alt="">
+      </div>
+      <div class="photo-item">
+        <img src="5.png" alt="">
+      </div>
+      <div class="photo-item">
+        <img src="6.png" alt="">
+      </div>
+    </div>
+    <!-- Location Block -->
+    <div class="location-block">
+      <div class="location-en-title">Location</div>
+      <div class="location-address">
+        Место проведения:<br>
+        улица Лещинского, 8к4
+      </div>
+      <a
+        class="location-map-link"
+        href="https://yandex.by/maps/?ll=27.453216%2C53.911556&z=17&pt=27.453216,53.911556&l=map"
+        target="_blank"
+        rel="noopener"
+      >ПОСМОТРЕТЬ НА КАРТЕ</a>
+    </div>
+    <!-- Registration Block -->
+    <div class="registration-block">
+      <div class="registration-icon">
+        <!-- SVG конверт -->
+        <svg width="56" height="46" viewBox="0 0 56 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="7" width="50" height="32" rx="6" stroke="#6c584c" stroke-width="2"/>
+          <path d="M6 10L27.5 29L50 10" stroke="#6c584c" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="registration-en-title">Registration</div>
+      <div class="registration-subtitle">Подтвердите, пожалуйста, своё<br>присутствие до 30 апреля</div>
+      <form class="registration-form"
+        autocomplete="off"
+        action="https://docs.google.com/forms/d/e/1FAIpQLSdaF07s46Lik9NKvtfwPhiLQvBeIdncaDq7hMUcHn9f5gfeiQ/formResponse"
+        method="POST"
+        target="hidden_iframe"
+        onsubmit="return submitGoogleForm(event);">
+        <div class="form-row">
+          <input type="text" name="entry.1225106312" placeholder="Введите имя и фамилию" required>
+        </div>
+        <div class="form-row">
+          <input type="number" name="entry.715538995" min="1" max="20" placeholder="Количество людей" required>
+        </div>
+        <button type="submit" class="registration-btn">Подтвердить присутствие</button>
+      </form>
+      <div class="registration-success" style="display:none;">Спасибо за регистрацию!</div>
+      <iframe name="hidden_iframe" style="display:none;" title="hidden"></iframe>
+    </div>
+    <!-- Coordinator Block -->
+    <div class="coordinator-block">
+      <div class="coordinator-en-title">Coordinator</div>
+      <div class="coordinator-text">
+        Дорогие гости! Мы будем очень рады видеть вас на нашем празднике.<br>
+        Обратите внимание, что отдельная детская программа не запланирована.<br><br>
+        А если у вас есть желание порадовать нас и гостей творческим номером — будем счастливы!<br>
+        Свяжитесь, пожалуйста, с нашим координатором Дашей.
+      </div>
+      <a href="https://t.me/darya_buldakova" target="_blank" class="coordinator-btn">
+        Написать Даше в Telegram
+      </a>
+      <div class="see-you-text">
+        До скорой встречи, дорогие друзья!
+      </div>
+      <div class="coordinator-photo-placeholder">
+        <!-- Добавьте сюда вашу фотографию, например: -->
+         <img src="7.png" alt="До скорой встречи" class="coordinator-photo"> 
+      </div>
+    </div>
+  </div>
+  <script>
+    // Таймер (с падежами)
+    function declOfNum(n, titles) {
+      return titles[
+        n % 10 == 1 && n % 100 != 11 ? 0 :
+        (n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20)) ? 1 : 2
+      ];
+    }
+    function updateCountdown() {
+      const targetDate = new Date("2025-10-18T00:00:00");
+      const now = new Date();
+      let diff = targetDate - now;
+      if (diff < 0) {
+        document.getElementById('countdown').innerHTML = "Событие уже наступило!";
+        return;
+      }
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      diff -= days * (1000 * 60 * 60 * 24);
+      const hours = Math.floor(diff / (1000 * 60 * 60));
+      diff -= hours * (1000 * 60 * 60);
+      const minutes = Math.floor(diff / (1000 * 60));
+      diff -= minutes * (1000 * 60);
+      const seconds = Math.floor(diff / (1000));
+      const dayStr = declOfNum(days, ['день', 'дня', 'дней']);
+      const hourStr = declOfNum(hours, ['час', 'часа', 'часов']);
+      const minStr = declOfNum(minutes, ['минута', 'минуты', 'минут']);
+      const secStr = declOfNum(seconds, ['секунда', 'секунды', 'секунд']);
+      document.getElementById('countdown').innerHTML =
+        `<div class="timer-block"><span>${days}</span>${dayStr}</div>
+         <div class="timer-block"><span>${hours}</span>${hourStr}</div>
+         <div class="timer-block"><span>${minutes}</span>${minStr}</div>
+         <div class="timer-block"><span>${seconds}</span>${secStr}</div>`;
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // Анимация появления текста при скролле (3-й блок)
+    function animateOnScroll(elem) {
+      if (!elem) return;
+      function onScroll() {
+        const rect = elem.getBoundingClientRect();
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+        if (rect.top + rect.height * 0.35 < windowHeight && rect.bottom > 0) {
+          elem.classList.add('animated');
+          window.removeEventListener('scroll', onScroll);
+        }
+      }
+      window.addEventListener('scroll', onScroll);
+      onScroll();
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      animateOnScroll(document.getElementById('animatedText'));
+    });
+
+    // Анимация появления timing-блока
+    function animateTimingOnScroll() {
+      const timingItems = document.querySelectorAll('.timing-item');
+      let triggered = false;
+      function onScroll() {
+        const block = document.querySelector('.timing-list');
+        if (!block) return;
+        const rect = block.getBoundingClientRect();
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+        if (rect.top + rect.height * 0.25 < windowHeight && rect.bottom > 0 && !triggered) {
+          triggered = true;
+          timingItems.forEach(item => item.classList.add('timing-animated'));
+          window.removeEventListener('scroll', onScroll);
+        }
+      }
+      window.addEventListener('scroll', onScroll);
+      onScroll();
+    }
+    document.addEventListener('DOMContentLoaded', animateTimingOnScroll);
+
+    // Google Form Submit + redirect to Telegram
+    function submitGoogleForm(e) {
+      e.preventDefault();
+      var form = document.querySelector('.registration-form');
+      form.style.display = 'none';
+      // Отправляем форму вручную
+      form.submit();
+      // Через 1 секунду переходим в Telegram
+      setTimeout(function() {
+        window.location.href = 'https://t.me/+1rp6igV1tyJmNjYy';
+      }, 1000);
+      return false;
+    }
+  </script>
+</body>
+</html>
