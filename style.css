@@ -347,7 +347,7 @@ body {
 .registration-form input[type="text"],
 .registration-form input[type="number"] {
   font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 16px;
+  font-size: 16px; /* Исправлено: минимум 16px для мобильных! */
   padding: 12px;
   border: 1px solid #ded6c1;
   background: #fff;
@@ -384,16 +384,17 @@ body {
 }
 .registration-btn {
   font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 18px;
+  font-size: 16px; /* Исправлено: стиль как у Даши */
   background: #6c584c;
   color: #fff;
   border: none;
   border-radius: 8px;
   padding: 12px 36px;
   cursor: pointer;
-  margin-top: 16px;
   letter-spacing: 1px;
+  text-decoration: none;
   transition: background 0.18s;
+  margin-top: 8px;
 }
 .registration-btn:hover,
 .registration-btn:active {
@@ -655,7 +656,7 @@ body {
   }
   .registration-form input[type="text"],
   .registration-form input[type="number"] {
-    font-size: 13px;
+    font-size: 16px; /* Исправлено: не уменьшаем ниже 16px! */
     padding: 8px;
     width: 200px;
   }
