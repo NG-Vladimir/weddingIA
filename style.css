@@ -347,7 +347,7 @@ body {
 .registration-form input[type="text"],
 .registration-form input[type="number"] {
   font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 16px; /* Исправлено: минимум 16px для мобильных! */
+  font-size: 16px; /* Минимум 16px для мобильных! */
   padding: 12px;
   border: 1px solid #ded6c1;
   background: #fff;
@@ -382,9 +382,13 @@ body {
   height: 20px;
   margin-right: 3px;
 }
+
+/* ОДИНАКОВЫЙ стиль для обеих кнопок: тонкий Montserrat, 16px, 400 */
+.coordinator-btn,
 .registration-btn {
   font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 16px; /* Исправлено: стиль как у Даши */
+  font-size: 16px;
+  font-weight: 400;
   background: #6c584c;
   color: #fff;
   border: none;
@@ -395,11 +399,15 @@ body {
   text-decoration: none;
   transition: background 0.18s;
   margin-top: 8px;
+  display: inline-block;
 }
+.coordinator-btn:hover,
+.coordinator-btn:active,
 .registration-btn:hover,
 .registration-btn:active {
   background: #a59682;
 }
+
 .registration-success {
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 17px;
@@ -528,25 +536,6 @@ body {
   line-height: 1.4;
   text-align: center;
 }
-.coordinator-btn {
-  display: inline-block;
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 16px;
-  background: #6c584c;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 12px 36px;
-  cursor: pointer;
-  letter-spacing: 1px;
-  text-decoration: none;
-  transition: background 0.18s;
-  margin-top: 8px;
-}
-.coordinator-btn:hover,
-.coordinator-btn:active {
-  background: #a59682;
-}
 .see-you-text {
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 18px;
@@ -656,7 +645,7 @@ body {
   }
   .registration-form input[type="text"],
   .registration-form input[type="number"] {
-    font-size: 16px; /* Исправлено: не уменьшаем ниже 16px! */
+    font-size: 16px; /* не уменьшаем ниже 16px! */
     padding: 8px;
     width: 200px;
   }
