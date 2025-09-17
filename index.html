@@ -6,12 +6,11 @@
   <title>Wedding Invitation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caramel&family=Nunito+Sans:ital,wght@0,200;1,200&family=Montserrat:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caramel&family=Great+Vibes&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="main-wrapper">
-    <!-- Верхний блок -->
     <div class="wedding-card">
       <img src="1.png" alt="Ivan & Anna" class="wedding-card__photo">
       <div class="wedding-card__overlay">
@@ -20,8 +19,7 @@
         <div class="wedding-card__names">Ivan &amp; Anna</div>
       </div>
     </div>
-    <!-- Второй блок-приглашение + таймер -->
-    <div class="invitation-content">
+    <div class="invitation-content section-bg">
       <div class="invitation-en-title">Invitation</div>
       <div class="invitation-subtitle">ДОРОГИЕ РОДНЫЕ И БЛИЗКИЕ!</div>
       <div class="invitation-text">
@@ -30,21 +28,18 @@
         и стать частью начала нашей семейной истории!
       </div>
       <div class="invitation-divider"></div>
-      <div class="timer-label">Увидимся с вами через:</div>
-      <div id="countdown" class="countdown-timer"></div>
     </div>
-    <!-- 3-й блок: фото и текст на нем -->
     <div class="bottom-photo-block">
       <div class="bottom-photo-overlay">
         <div class="bottom-photo-text" id="animatedText">
-          ...но любовь из них больше.<br>
-          <span>1 Кор. 13:13</span>
+          <span>... И да будет благоволение</span><br>
+          <span class="bottom-photo-text-verse">Господа Бога нашего на нас</span>
         </div>
         <img src="2.png" alt="Bottom block photo" class="bottom-photo-img">
+        <div class="bottom-photo-psalm">Пс. 89:17</div>
       </div>
     </div>
-    <!-- Timing Block -->
-    <div class="timing-block">
+    <div class="timing-block section-bg">
       <div class="timing-en-title">Timing</div>
       <div class="timing-list">
         <div class="timing-item ani-delay-1">
@@ -89,46 +84,39 @@
         </div>
       </div>
     </div>
-    <!-- Галерея с четырьмя фото: сразу после тайминга -->
-    <div class="photo-gallery">
-      <div class="photo-item">
-        <img src="3.png" alt="">
-      </div>
-      <div class="photo-item">
-        <img src="4.png" alt="">
-      </div>
-      <div class="photo-item">
-        <img src="5.png" alt="">
-      </div>
-      <div class="photo-item">
-        <img src="6.png" alt="">
-      </div>
+    <div class="photo-gallery section-bg">
+      <div class="photo-item"><img src="3.png" alt=""></div>
+      <div class="photo-item"><img src="4.png" alt=""></div>
+      <div class="photo-item"><img src="5.png" alt=""></div>
+      <div class="photo-item"><img src="6.png" alt=""></div>
     </div>
-    <!-- Location Block -->
-    <div class="location-block">
+    <div class="location-block section-bg">
       <div class="location-en-title">Location</div>
       <div class="location-address">
         Место проведения:<br>
         улица Лещинского, 8к4
       </div>
-      <a
-        class="location-map-link"
+      <a class="location-map-link"
         href="https://yandex.by/maps/?ll=27.453216%2C53.911556&z=17&pt=27.453216,53.911556&l=map"
         target="_blank"
         rel="noopener"
       >ПОСМОТРЕТЬ НА КАРТЕ</a>
     </div>
-    <!-- Registration Block -->
-    <div class="registration-block">
+    <div class="detailes-block section-bg">
+      <div class="detailes-en-title">Detailes</div>
+      <div class="detailes-text">
+        Приятным комплиментом для нас, вместо цветов, будут ваши любимые сладости.
+      </div>
+    </div>
+    <div class="registration-block section-bg">
       <div class="registration-icon">
-        <!-- SVG конверт -->
         <svg width="56" height="46" viewBox="0 0 56 46" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="3" y="7" width="50" height="32" rx="6" stroke="#6c584c" stroke-width="2"/>
           <path d="M6 10L27.5 29L50 10" stroke="#6c584c" stroke-width="2" stroke-linecap="round"/>
         </svg>
       </div>
       <div class="registration-en-title">Registration</div>
-      <div class="registration-subtitle">Подтвердите, пожалуйста, своё<br>присутствие до 13 Октября</div>
+      <div class="registration-subtitle">Подтвердите, пожалуйста, своё<br>присутствие до 10 Октября</div>
       <form class="registration-form"
         autocomplete="off"
         action="https://docs.google.com/forms/d/e/1FAIpQLSdaF07s46Lik9NKvtfwPhiLQvBeIdncaDq7hMUcHn9f5gfeiQ/formResponse"
@@ -136,7 +124,7 @@
         target="hidden_iframe"
         onsubmit="return submitGoogleForm(event);">
         <div class="form-row">
-          <input type="text" name="entry.1225106312" placeholder="Ваше имя и фамилия" required>
+          <input type="text" name="entry.1225106312" placeholder="Ваша фамилия и имя" required>
         </div>
         <div class="form-row">
           <input type="number" name="entry.715538995" min="1" max="20" placeholder="Количество людей" required>
@@ -146,29 +134,31 @@
       <div class="registration-success" style="display:none;">Спасибо за регистрацию!</div>
       <iframe name="hidden_iframe" style="display:none;" title="hidden"></iframe>
     </div>
-    <!-- Coordinator Block -->
-    <div class="coordinator-block">
+    <div class="coordinator-block section-bg">
       <div class="coordinator-en-title">Coordinator</div>
       <div class="coordinator-text">
         Дорогие гости! Мы будем очень рады видеть вас на нашем празднике.<br>
-        Обратите внимание, что отдельная детская программа не запланирована.<br><br>
+        Обратите внимание, что отдельная детская программа не запланирована.<br>
+        Пожалуйста, позаботьтесь о том, чтобы провести этот вечер без детей.<br><br>
         А если у вас есть желание порадовать нас и гостей творческим номером — будем счастливы!<br>
         Свяжитесь, пожалуйста, с нашим координатором Дашей.
       </div>
       <a href="https://t.me/darya_buldakova" target="_blank" class="coordinator-btn">
         Написать Даше в Telegram
       </a>
+      <div class="coordinator-photo-placeholder">
+        <img src="7.png" alt="До скорой встречи" class="coordinator-photo"> 
+      </div>
+    </div>
+    <div class="countdown-wrapper section-bg">
       <div class="see-you-text">
         До скорой встречи, дорогие друзья!
       </div>
-      <div class="coordinator-photo-placeholder">
-        <!-- Добавьте сюда вашу фотографию, например: -->
-         <img src="7.png" alt="До скорой встречи" class="coordinator-photo"> 
-      </div>
+      <div class="timer-label">Увидимся с вами через:</div>
+      <div id="countdown" class="countdown-timer"></div>
     </div>
   </div>
   <script>
-    // Таймер (с падежами)
     function declOfNum(n, titles) {
       return titles[
         n % 10 == 1 && n % 100 != 11 ? 0 :
@@ -203,7 +193,6 @@
     updateCountdown();
     setInterval(updateCountdown, 1000);
 
-    // Анимация появления текста при скролле (3-й блок)
     function animateOnScroll(elem) {
       if (!elem) return;
       function onScroll() {
@@ -221,7 +210,6 @@
       animateOnScroll(document.getElementById('animatedText'));
     });
 
-    // Анимация появления timing-блока
     function animateTimingOnScroll() {
       const timingItems = document.querySelectorAll('.timing-item');
       let triggered = false;
@@ -241,14 +229,11 @@
     }
     document.addEventListener('DOMContentLoaded', animateTimingOnScroll);
 
-    // Google Form Submit + redirect to Telegram
     function submitGoogleForm(e) {
       e.preventDefault();
       var form = document.querySelector('.registration-form');
       form.style.display = 'none';
-      // Отправляем форму вручную
       form.submit();
-      // Через 1 секунду переходим в Telegram
       setTimeout(function() {
         window.location.href = 'https://t.me/+1rp6igV1tyJmNjYy';
       }, 1000);
