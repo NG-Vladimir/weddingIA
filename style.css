@@ -39,7 +39,7 @@ body {
 .timing-en-title,
 .invitation-en-title {
   font-family: 'Caramel', cursive;
-  font-size: 50px;
+  font-size: 42px;
   color: #4e3c2b;
   margin-bottom: 15px;
   font-weight: 400;
@@ -240,7 +240,7 @@ body {
 }
 .bottom-photo-text {
   position: absolute;
-  top: 40%;
+  top: 38%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
@@ -483,12 +483,20 @@ body {
   .coordinator-text,
   .invitation-subtitle,
   .invitation-text {
-    font-size: 18px;
-    margin-bottom: 15px;
+    font-size: 16px;
+    margin-bottom: 13px;
+  }
+  .bottom-photo-text {
+    top: 27%;
+    font-size: 24px;
+  }
+  .bottom-photo-text span,
+  .bottom-photo-text-verse {
+    font-size: 24px;
   }
   .bottom-photo-psalm {
     font-size: 14px;
-    top: 48%;
+    top: 43%;
   }
   .see-you-text {
     font-size: 17px;
@@ -507,26 +515,14 @@ body {
   .timer-block span {
     font-size: 17px;
   }
-  .bottom-photo-text,
-  .bottom-photo-text-verse {
-    font-size: 14px;
-  }
-  .bottom-photo-text span,
-  .bottom-photo-text-verse {
-    font-size: 14px;
-  }
-  .bottom-photo-psalm {
-    font-size: 11px;
-    top: 48%;
-  }
   .location-en-title,
   .detailes-en-title,
   .registration-en-title,
   .coordinator-en-title,
   .timing-en-title,
   .invitation-en-title {
-    font-size: 18px;
-    margin-bottom: 6px;
+    font-size: 22px;
+    margin-bottom: 7px;
   }
   .location-address,
   .detailes-text,
@@ -534,19 +530,20 @@ body {
   .coordinator-text,
   .invitation-subtitle,
   .invitation-text {
-    font-size: 13px;
-    margin-bottom: 9px;
+    font-size: 14px;
+    margin-bottom: 7px;
   }
-  .detailes-en-title,
-  .coordinator-en-title,
-  .invitation-en-title {
-    font-size: 18px;
+  .bottom-photo-text {
+    top: 22%;
+    font-size: 15px;
   }
-  .detailes-text,
-  .coordinator-text,
-  .invitation-subtitle,
-  .invitation-text {
-    font-size: 13px;
+  .bottom-photo-text span,
+  .bottom-photo-text-verse {
+    font-size: 15px;
+  }
+  .bottom-photo-psalm {
+    font-size: 10px;
+    top: 37%;
   }
   .coordinator-btn {
     font-size: 13px;
